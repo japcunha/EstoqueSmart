@@ -1,0 +1,126 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  min-height: 100vh;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+header h1 { font-size: 1.8rem; }
+header p { opacity: 0.85; margin-top: 4px; }
+
+main {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  main { grid-template-columns: 1fr; }
+}
+
+.form-card, .lista-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2 { margin-bottom: 16px; color: #1e3a8a; font-size: 1.2rem; }
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus { outline: 2px solid #1e3a8a; border-color: transparent; }
+
+.botoes { display: flex; gap: 10px; margin-top: 16px; }
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #1e3a8a;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover { background: #16296b; }
+
+#btn-cancelar { background: #6b7280; }
+#btn-cancelar:hover { background: #4b5563; }
+
+/* Cards de produto */
+.produto {
+  border-left: 6px solid #10b981;
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.produto.amarelo { border-left-color: #f59e0b; background: #fffbeb; }
+.produto.vermelho { border-left-color: #ef4444; background: #fef2f2; }
+
+.produto-info h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.produto-info p { font-size: 0.85rem; color: #555; }
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  background: #10b981;
+}
+.badge.amarelo { background: #f59e0b; }
+.badge.vermelho { background: #ef4444; }
+
+.acoes { display: flex; gap: 6px; }
+
+.acoes button {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  flex: initial;
+}
+
+.btn-editar { background: #3b82f6; }
+.btn-excluir { background: #ef4444; }
+
+.vazio {
+  text-align: center;
+  color: #999;
+  padding: 40px 0;
+}

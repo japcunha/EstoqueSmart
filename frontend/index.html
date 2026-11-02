@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstoqueSmart</title>
+    <link rel="stylesheet" href="style.css">
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Controle de Estoque Atakarejo</h1>
+        <p>Com sistema de alertas de vencimento automáticos integrados</p>
+    </header>
+    <main>
+        <form id="product-form" class="form-card">
+            <input type="hidden" id="product-id">
+
+            <label>Nome do produto: </label>
+            <input type="text" id="name" required placeholder="ex: Cerveja x">
+
+            <label>Categoria </label>
+            <input type="text" id="categoria" placeholder="ex: bebidas">
+
+            <label>Quantidade: </label>
+            <input type="number" id="quantidade" min="1" required>
+
+            <label>Data de vencimento: </label>
+            <input type="date" id="validade" required>
+
+            <div class="botoes">
+                <button type="submit" id="save-button">salvar</button>
+                <button type="button" id="btn-cancelar style=" display:none">Cancelar
+                </button>
+            </div>
+        </form>
+
+        <section class="list-card">
+            <h2>Produtos em Estoque</h2>
+            <div id="lista-produtos">
+                <div class="product">
+                    <div class="yellow-product"></div>
+                    <div class="red-product"></div>
+                </div>
+        </section>
+    </main>
+</body>
+
+</html>

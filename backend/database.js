@@ -12,9 +12,10 @@ db.serialize(() => {
         quantidade INTEGER NOT NULL,
         data_validade TEXT NOT NULL
         )`);
-        console.log(`bando de dados pronto pra rodar!`);
+        console.log(`banco de dados ta pronto pra rodar!`);
 
 });
+
 module.exports = db;
 
 
